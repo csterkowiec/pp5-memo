@@ -8,7 +8,15 @@ git push
 
 git clone
 
-git
+git add src/
+
+git add .
+
+git checkout -b 'introduce-spring'
+
+git push origin 
+
+git config --global
 
 
 wkleić do poma dodatkowe linijki springbootowe
@@ -43,6 +51,8 @@ public class CreditCardReportingController {
  @GetMapping("/balances")
  
  public List<CardBalanceDto> cardsBalances(){
+ 
+    return api.cardsBalances()
     return Array.asList(
       new CardBalanceDto(number: "1234", BigDecimal.valueOf(1000));
       new CardBalanceDto(number: "1543", BigDecimal.valueOf(2000));
@@ -71,4 +81,8 @@ public class CreditCardReportingController {
   
   curl -x POST localhost:8080/api/cards/withdraw -H "Content-Type: apllication/json" -d '{"creditCardNumber": "1234", "valueOf": 2000.10}'
   
+  
+ Klasa CreditCardConfiguration
+ 
+ @Configuration
   
